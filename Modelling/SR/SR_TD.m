@@ -1,14 +1,14 @@
-load('rat_params.mat')
-load('rat.mat')
-ppts_traj = rat;
+load('human_params.mat')
+load('humans.mat')
+ppts_traj = humans;
 
-% load('human_params.mat')
-% load('humans.mat')
-% ppts_traj = humans;
+% load('rat_params.mat')
+% load('rat.mat')
+% ppts_traj = rat;
 
 K = 45;
 
-n_samples = 10;
+n_samples = 100;
 n_ppt = length(ppt_params);
 success = nan(n_samples*n_ppt,25,10);
 trajectories = cell(n_samples*n_ppt,25,10);

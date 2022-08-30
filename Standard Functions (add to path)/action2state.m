@@ -1,7 +1,6 @@
 %% This function is used as an observer to give the next state and the next reward using the current state and action
 function [next_state,r] = action2state(state,a_idx, A_allowed)
 
-%A_space = [0,-1;1,-1;1,0;1,1;0,1;-1,1;-1,0;-1,-1];
 A_space = [0,-1;1,0;0,1;-1,0];
 [x,y] = state2coords(state);
 
@@ -18,7 +17,6 @@ end
 if (next_x == 4 && next_y == 4)
     r = 1;
 else 
-    %r = -1e-5;
     r =0;
 end
 end
